@@ -1,0 +1,14 @@
+{
+    "variables": {"infarto":["infarto del miocardio",["False","True"],"patologia",[],[0.8,0.2]],
+                  "angina" :["angina pectoris",["False","True"],"patologia",[],[0.6,0.4]],
+                  "algia_petto":["dolore al petto",["False","True"],"sintomo",["infarto","angina"],[0.8,0.2,0.3,0.7,0.3,0.7,0.2,0.8]],
+                  "dolore_braccio":["dolore al braccio sinistro",["False","True"],"sintomo",["infarto"],[0.8,0.2,0.2,0.8]]},    
+
+    "therapies": {"angioplastica":[["infarto","True",0.40]],
+                  "ossigeno":[["infarto","True",0.30],["angina","True",0.30]],
+                  "vasodilatatori":[["infarto","True",0.25],["angina","True",0.15]],
+                  "antinfiammatori":[["algia_petto","True",0.60]]},
+
+    "false":{}
+
+}

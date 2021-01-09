@@ -1,0 +1,6 @@
+{
+    "paziente_1": ["Pippo",{"febbre":"Lieve","RxTorace":"Bronchite"}],
+    "paziente_2": ["Topolino",{"febbre":"Moderata","RxTorace":"Bronchite"}],
+    "paziente_3": ["Paperino",{"febbre":"Alta","RxTorace":"Bronchite","Tosse":"Catarrale"}],
+    "paziente_4": ["Pietro il cattivo",{"febbre":"Alta","RxTorace":"Fibrosi","Tosse":"Stizzosa","Anosmia":"True"}]
+}

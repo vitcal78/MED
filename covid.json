@@ -1,0 +1,24 @@
+{
+    "variables": {"covid"     :["Positivo al Covid-19",["False","True"],"patologia",[],[0.8,0.2]],
+                  "influenza" :["Sindrome influenzale",["False","True"],"patologia",[],[0.6,0.4]],
+                  "febbre"    :["Febbre",["Lieve","Moderata","Alta"],"sintomo",["covid","influenza"],[0.8,0.1,0.1,0.2,0.3,0.5,0.2,0.6,0.2,0.1,0.2,0.7]],
+                  "RxTorace"  :["Rx del Torace",["Fibrosi","Bronchite","Normale"],"esame",["covid","influenza"],[0.2,0.3,0.5,0.3,0.6,0.1,0.6,0.4,0.0,0.9,0.1,0.0]],
+                  "Tosse"     :["Tosse",["Stizzosa","Catarrale","Assente"],"sintomo",["covid","influenza"],[0.4,0.4,0.2,0.2,0.7,0.1,0.8,0.1,0.1,0.5,0.5,0.0]],
+                  "Anosmia"   :["Anosmia:perdita del gusto",["False","True"],"sintomo",["covid","influenza"],[0.9,0.1,0.6,0.4,0.2,0.8,0.2,0.8]],
+                  "Dispnea"   :["Dispnea",["Assente","Moderata","Alta"],"sintomo",["covid","influenza"],[0.4,0.4,0.2,0.2,0.4,0.4,0.1,0.3,0.6,0.1,0.1,0.8]]},
+                  
+
+    "therapies": {"antipiretico":[["influenza","True",0.20],["febbre","Moderata",0.5],["febbre","Alta",0.3]],
+                  "ossigeno":[["covid","True",0.50],["Dispnea","Moderata",0.50],["Dispnea","Alta",0.30]],
+                  "Mucolitico":[["Tosse","Catarrale",0.30]],
+                  "Antibiotico":[["febbre","Alta",0.30],["influenza","True",0.30]],
+                  "Antivirale":[["covid","True",0.50]],
+                  "intubazione":[["Dispnea","Alta",0.50]],
+                  "aerosol":[["RxTorace","Bronchite",0.50]],
+                  "corticosteroidi":[["RxTorace","Fibrosi",0.30],["covid","True",0.50]]},
+    
+    "false"     :{"aerosol":["ossigeno","intubazione"],
+                  "ossigeno":["intubazione"],
+                  "Antibiotico":["Antivirale"]}
+    
+}

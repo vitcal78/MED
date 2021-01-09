@@ -1,0 +1,5 @@
+{
+    "paziente_1": ["Pippo",{"algia_petto":"True"}],
+    "paziente_2": ["Topolino",{"algia_petto":"True","dolore_braccio":"True"}],
+    "paziente_3": ["Paperino",{"dolore_braccio":"True"}]
+}

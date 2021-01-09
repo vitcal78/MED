@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIF VERSION="0.3"  xmlns="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3 http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3/XMLBIFv0_3.xsd">
+<NETWORK>
+<NAME>Untitled</NAME>
+<PROPERTY>detailed = </PROPERTY>
+<PROPERTY>short = </PROPERTY>
+
+<VARIABLE TYPE="nature">
+	<NAME>Infarto</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7158.0, 5068.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Angina pectoris</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7291.0, 5037.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Dolore centrale</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7428.0, 5242.0)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Dolore braccio</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<OBS>T</OBS>
+	<PROPERTY>position = (7114.0, 5219.0)</PROPERTY>
+</VARIABLE>
+
+<DEFINITION>
+	<FOR>Infarto</FOR>
+	<TABLE>0.2 0.8</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Angina pectoris</FOR>
+	<TABLE>0.4 0.6</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Dolore centrale</FOR>
+	<GIVEN>Infarto</GIVEN>
+	<GIVEN>Angina pectoris</GIVEN>
+	<TABLE>0.8 0.2 0.7 0.3 0.7 0.3 0.2 0.8</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Dolore braccio</FOR>
+	<GIVEN>Infarto</GIVEN>
+	<TABLE>0.8 0.2 0.2 0.8</TABLE>
+</DEFINITION>
+</NETWORK>
+</BIF>
